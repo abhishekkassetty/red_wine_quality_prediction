@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    head {
+      font-family: "Brush Script MT", cursive;
+    }
+    body {
+        font-family: "Brush Script MT", cursive;
+        background-image: url_for('static' , filename="468014.jpg");
+      }
+    h1 {
+        font-size: 50px;
+      }
+      
+      h2 {
+        font-size: 30px;
+      }
+      
+      p {
+        font-size: 30px;
+      }
+      body {
+        background-image: url('468014.jpg');
+        background-repeat: no-repeat;
+      }
+        
+    </style>
+
+    <title>
+      Red wine classification
+    </title>
+
+
+    <head><h1>
+        Red wine classification</h1>
+    </head>
+    {% block body %} 
+    <body>
+        
+        <p>
+        Here we will check the quality of red wine</p>
+
+        <div>
+            <form action="/predict" method="POST">
+                <div>
+                                <label for="fixed acidity" >fixed acidity:</label><br>
+                                <input type="text" id="fixed acidity" name="fixed acidity"><br>
+                                <label for="volatile acidity">volatile acidity:</label><br>
+                                <input type="text" id="volatile acidity" name="volatile acidity"><br>
+                                <label for="citric acid">citric acid:</label><br>
+                                <input type="text" id="citric acid" name="citric acid"><br>
+                                <label for="residual sugar">residual sugar:</label><br>
+                                <input type="text" id="residual sugar" name="residual sugar"><br>
+                                <label for="chlorides">chlorides :</label><br>
+                                <input type="text" id="chlorides" name="chlorides"><br>
+                                <label for="free sulfur dioxide">free sulfur dioxide :</label><br>
+                                <input type="text" id="free sulfur dioxide" name="free sulfur dioxide"><br>
+                                <label for="total sulfur dioxide">total sulfur dioxide :</label><br>
+                                <input type="text" id="total sulfur dioxide" name="total sulfur dioxide"><br>
+                                <label for="density">density :</label><br>
+                                <input type="text" id="density" name="density"><br>
+                                <label for="pH">pH :</label><br>
+                                <input type="text" id="pH" name="pH"><br>
+                                <label for="sulphates">sulphates :</label><br>
+                                <input type="text" id="sulphates" name="sulphates"><br>
+                                <label for="alcohol">alcohol :</label><br>
+                                <input type="text" id="alcohol" name="alcohol"><br>
+
+        
+                              
+                </div>
+        
+                <input type="submit" value="Predict">
+        
+            </form>
+        
+            
+            <h2 align="center" > Predicted quality of wine: {{pred_r}}</h2>
+
+            <h2 align="center"  >Predicted Type: {{pred_c}}</h2>
+
+
+        </div>
+
+
+
+    </body>
+    </html>
+
+    {% endblock %}

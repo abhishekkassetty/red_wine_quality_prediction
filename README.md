@@ -14,6 +14,8 @@ Trained the data with different kernels of SVM algorithm and did the analysis of
               2.Polynomial kernal
               3.RBF(radial basis function) kernal
               4.sigmoid kernal
+              
+Trained the data with linear regression and Random forest Algorithms
 
 Did Both Classification and Regression on quality of wine and saved the model using pickle
 
